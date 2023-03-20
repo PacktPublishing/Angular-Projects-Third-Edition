@@ -1,0 +1,47 @@
+<h3>Report an issue</h3>
+<form clrForm *ngIf="issueForm" [formGroup]="issueForm" (ngSubmit)="addIssue()">
+    <clr-input-container>
+        <label>Title</label>
+        <input clrInput formControlName="title" />
+        <clr-control-error>Title is required</clr-control-error>
+    </clr-input-container>
+    <div class="clr-row" *ngIf="suggestions.length">
+        <div class="clr-col-lg-2"></div>
+        <div class="clr-col-lg-6">
+          <clr-stack-view>
+            <clr-stack-header>Similar issues</clr-stack-header>
+            <clr-stack-block *ngFor="let issue of suggestions">
+                <clr-stack-label>#{{issue.issueNo}}:{{issue.title}}</clr-stack-label>
+                <clr-stack-content>{{issue.description}}</clr-stack-content>
+            </clr-stack-block>
+          </clr-stack-view>
+        </div>
+    </div>     
+    <clr-textarea-container>
+        <label>Description</label>
+        <textarea clrTextarea formControlName="description"></textarea>
+    </clr-textarea-container>
+    <clr-radio-container clrInline>
+        <label>Priority</label>
+        <clr-radio-wrapper>
+          <input type="radio" value="low" clrRadio formControlName="priority" />
+          <label>Low</label>
+        </clr-radio-wrapper>
+        <clr-radio-wrapper>
+          <input type="radio" value="high" clrRadio formControlName="priority" />
+          <label>High</label>
+        </clr-radio-wrapper>
+        <clr-control-error>Priority is required</clr-control-error>
+    </clr-radio-container>
+    <clr-select-container>
+        <label>Type</label>
+        <select clrSelect formControlName="type">
+          <option value="Feature">Feature</option>
+          <option value="Bug">Bug</option>
+          <option value="Documentation">Documentation</option>
+        </select>
+        <clr-control-error>Type is required</clr-control-error>
+    </clr-select-container>    
+  <button class="btn btn-primary" type="submit">Create</button>
+  <button class="btn" type="button" (click)="formClose.emit()">Cancel</button>
+</form>
