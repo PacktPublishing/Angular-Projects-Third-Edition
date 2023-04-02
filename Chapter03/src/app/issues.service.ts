@@ -6,9 +6,9 @@ import { Issue } from './issue';
 })
 export class IssuesService {
   private issues: Issue[] = [];
-  
+
   constructor() { }
-  
+
   getPendingIssues(): Issue[] {
     return this.issues.filter(issue => !issue.completed);
   }
@@ -25,7 +25,7 @@ export class IssuesService {
     };
     const index = this.issues.findIndex(i => i === issue);
     this.issues[index] = selectedIssue;
-  }  
+  }
 
   getSuggestions(title: string): Issue[] {
     if (title.length > 3) {
@@ -33,6 +33,17 @@ export class IssuesService {
         issue.title.indexOf(title) !== -1);
     }
     return [];
-  }  
-  
+  }
+
+  updateIssue(issueNo: number, issue: Issue) {
+    const existingIssue = this.issues.find(i => i.issueNo === issueNo);
+    if(existingIssue) {
+      const index = this.issues.indexOf(existingIssue);
+      this.issues[index] = {
+        ...existingIssue,
+        ...issue
+      };
+    }
+  }
+
 }
