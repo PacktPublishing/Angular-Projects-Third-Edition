@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "AttrDirectiveSchema",
+  "title": "My Attribute Directive Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the directive.",
+      "type": "string"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the directive.",
+      "visible": false
+    }
+  },
+  "required": ["name"]
+}

@@ -1,0 +1,8 @@
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[my<%= classify(name) %>]'
+})
+export class My<%= classify(name) %>Directive {
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
+}
