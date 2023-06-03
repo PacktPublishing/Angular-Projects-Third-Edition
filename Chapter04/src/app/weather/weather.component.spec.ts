@@ -6,12 +6,10 @@ describe('WeatherComponent', () => {
   let component: WeatherComponent;
   let fixture: ComponentFixture<WeatherComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ WeatherComponent ]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [WeatherComponent]
+    });
     fixture = TestBed.createComponent(WeatherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
