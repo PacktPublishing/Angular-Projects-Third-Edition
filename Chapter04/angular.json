@@ -107,11 +107,8 @@
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "weather-app:build:production",
-            "firebaseProject": "weather-app-92178",
-            "firebaseHostingSite": "weather-app-92178"
+            "version": 2,
+            "browserTarget": "weather-app:build:production"
           }
         }
       }
