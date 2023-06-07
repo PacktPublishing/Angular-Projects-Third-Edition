@@ -1,4 +1,3 @@
-import { LayoutModule } from '@angular/cdk/layout';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +17,6 @@ describe('VisitorComponent', () => {
       declarations: [VisitorComponent],
       imports: [
         NoopAnimationsModule,
-        LayoutModule,
         MatButtonModule,
         MatIconModule,
         MatListModule,

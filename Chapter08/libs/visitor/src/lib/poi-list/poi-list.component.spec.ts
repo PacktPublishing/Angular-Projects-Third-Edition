@@ -6,12 +6,10 @@ describe('PoiListComponent', () => {
   let component: PoiListComponent;
   let fixture: ComponentFixture<PoiListComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PoiListComponent ]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [PoiListComponent]
+    });
     fixture = TestBed.createComponent(PoiListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
