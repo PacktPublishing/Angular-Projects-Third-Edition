@@ -6,12 +6,10 @@ describe('CopyButtonComponent', () => {
   let component: CopyButtonComponent;
   let fixture: ComponentFixture<CopyButtonComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CopyButtonComponent ]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [CopyButtonComponent]
+    });
     fixture = TestBed.createComponent(CopyButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

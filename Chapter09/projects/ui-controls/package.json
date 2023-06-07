@@ -2,9 +2,9 @@
   "name": "ui-controls",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^15.2.0",
-    "@angular/core": "^15.2.0",
-    "@angular/cdk": "^15.2.8",
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/cdk": "^16.0.3",
     "bulma": "^0.9.4"
   },
   "dependencies": {

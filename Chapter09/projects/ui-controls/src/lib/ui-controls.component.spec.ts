@@ -6,12 +6,10 @@ describe('UiControlsComponent', () => {
   let component: UiControlsComponent;
   let fixture: ComponentFixture<UiControlsComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ UiControlsComponent ]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [UiControlsComponent]
+    });
     fixture = TestBed.createComponent(UiControlsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
